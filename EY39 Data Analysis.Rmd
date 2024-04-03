@@ -1,0 +1,293 @@
+---
+title: "EY39 Data Analysis"
+author: "Emily Yang"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(readxl)
+df <- read_excel('EY39Data.xlsx')
+
+
+```
+
+```{r A1}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, A1, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="A1",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("A1.png")
+
+```
+#####serrato
+
+dummy <- df$A3
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, dummy, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="dummy",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+
+```{r A3}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, A3, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="A3",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("A3.png")
+
+
+```
+
+```{r A5}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, A5, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="A5",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("A5.png")
+
+```
+
+
+```{r A7}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, A7, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="A7",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("A7.png")
+
+
+```
+```{r A9}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, A9, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="A9",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("A9.png")
+
+
+```
+
+```{r C1}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, C1, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="C1",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("C1.png")
+
+
+```
+
+```{r C3}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, C3, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="C3",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("C3.png")
+```
+```{r C5}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, C5, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="C5",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("C5.png")
+
+```
+
+```{r C7}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, C7, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="C7",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("C7.png")
+```
+```{r C9}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, C9, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="C9",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("C9.png")
+```
+
+```{r E1}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, E1, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="E1",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("E1.png")
+
+```
+
+```{r E3}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, E3, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="E3",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("E3.png")
+
+
+```
+
+```{r E5}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, E5, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="E5",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("E5.png")
+
+
+```
+
+```{r E7}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, E7, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="E7",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("E7.png")
+
+```
+```{r E9}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, E9, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="E9",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("E9.png")
+
+```
+
+```{r G1}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, G1, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="G1",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("G1.png")
+
+```
+
+```{r G3}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, G3, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="G3",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("G3.png")
+
+
+```
+
+```{r G5}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, G5, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="G5",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("G5.png")
+
+```
+
+```{r G7}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, G7, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="G7",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("G7.png")
+
+```
+
+```{r Blank1}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, Blank1, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="Blank1",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("Blank1.png")
+
+```
+
+```{r Blank2}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, Blank2, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="Blank2",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("Blank2.png")
+```
+
+```{r Blank3}
+
+p <- ggplot(data=df)+ 
+  geom_line(aes(Hours, Blank3, group=ID, colour=ID),
+                data = . %>% filter(ID %in% c("Default" , "mCherry", "Alexa594")))
+p <- p +labs(title="Blank3",
+        x ="Time (hours)", y = "Fluorescence (AU)")
+p
+#ggsave("Blank3.png")
+
+``` 
